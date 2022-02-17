@@ -1,0 +1,16 @@
+h1,
+p {
+  font-family: sans-serif;
+}
+
+.cartButton {
+  background-color: pink;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+}
+
+.title {
+  color: pink;
+  margin-top: 55px;
+}

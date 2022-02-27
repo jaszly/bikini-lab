@@ -138,17 +138,20 @@ const PlacesList = () => {
               <img src="..." class="img-thumbnail" alt="..." />
             </div>
           </Row>
-          <hr />
 
-          <Row className="grid two  ">
-            <div>
-              <p>budget</p>
-            </div>
-            <Row>{budget}</Row>
-          </Row>
+          <p>${budget}</p>
+          <p>this says somting</p>
+          <Button className="cartButton" onClick={buy}>
+            Add to Budget
+          </Button>
+          <hr />
         </div>
       </>
     );
+  };
+
+  const Total = ({ totalBudget }) => {
+    return <h3>Trip Budget Estimator: {totalBudget}.00</h3>;
   };
 
   return (
@@ -178,6 +181,7 @@ const PlacesList = () => {
               onShowPlace={showPlace}
             />
           ))}
+          <Total totalBudget={total} />{" "}
         </div>
       </div>
     </>

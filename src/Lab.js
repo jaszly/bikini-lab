@@ -77,18 +77,6 @@ const WanderLab = ({ index, onCreatePlace }) => {
       setQuantity(quantity + 1);
       onCalculateTotal(budget);
     };
-    return (
-      <>
-        <Container>
-          <Row>
-            <Button className="cartButton" onClick={buy}>
-              Add to Budget
-            </Button>
-            <hr />
-          </Row>
-        </Container>
-      </>
-    );
   };
 
   return (

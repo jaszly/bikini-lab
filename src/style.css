@@ -2,6 +2,9 @@ h1,
 p {
   font-family: sans-serif;
 }
+body {
+  height: 100%;
+}
 
 .cartButton {
   background-color: pink;
@@ -13,4 +16,34 @@ p {
 .title {
   color: pink;
   margin-top: 55px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid.two {
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.grid.three {
+  grid-template-columns: 1fr 2fr 3fr;
+}
+
+.type {
+  text-transform: lowercase;
+  font-size: 4vh;
+  margin: -1vh;
+}
+
+.user {
+  text-transform: lowercase;
+  font-size: 4vh;
+  margin: 1vh 0 0 0;
+}
+
+.sections {
+  margin: 10vh 0 12vh 0;
 }

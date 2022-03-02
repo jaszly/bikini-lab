@@ -4,6 +4,7 @@ p {
 }
 body {
   height: 100%;
+  background-color: #efe2cf;
 }
 
 .cartButton {
@@ -11,6 +12,36 @@ body {
   color: white;
   padding: 5px 15px;
   border: none;
+}
+.form-control {
+  background-color: #efe2cf;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 20vw;
+}
+
+/* input control */
+.form-control:focus {
+  border-color: black;
+  background-color: #efe2cf;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.form-select {
+  width: 15vw;
+}
+
+.form-label {
+  text-transform: lowercase;
+  font-size: 1.4em;
+  margin-top: 5vh;
+  border-top: 1px solid #7b8a96;
+  padding: 2vh 0;
+}
+
+.input-lrg {
+  height: 13vw;
+  width: 26vw;
 }
 
 .title {

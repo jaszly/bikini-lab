@@ -93,15 +93,17 @@ const WanderLab = ({ index, onCreatePlace }) => {
 
           <Form>
             <Form.Group className="mb-1">
-              <Form.Label> City Name </Form.Label>
+              <Form.Label> City + Time of day:</Form.Label>
               <Form.Control
                 type="text"
                 value={cityName}
                 placeholder="name of city"
                 onChange={(e) => setcityName(e.target.value)}
               />
+
               <br />
               <Form.Select
+                className="form-control"
                 aria-label="Default select example"
                 id="type"
                 name="type"
@@ -115,6 +117,7 @@ const WanderLab = ({ index, onCreatePlace }) => {
                 <option value="4">at night</option>
               </Form.Select>
               <br />
+              <Form.Label> Upload a photo </Form.Label>
 
               <Form.Control type="file" name="file" className="form-control" />
             </Form.Group>
@@ -154,6 +157,7 @@ const WanderLab = ({ index, onCreatePlace }) => {
             <Form.Group className="mb-1">
               <Form.Label> See: </Form.Label>
               <Form.Control
+                className="input-lrg"
                 type="text"
                 value={see}
                 onChange={(e) => setsee(e.target.value)}
@@ -166,12 +170,14 @@ const WanderLab = ({ index, onCreatePlace }) => {
               />
               <Form.Label> Do: </Form.Label>
               <Form.Control
+                className="input-lrg"
                 type="text"
                 value={mustDo}
                 onChange={(e) => setmustDo(e.target.value)}
               />
               <Form.Label> Explore: </Form.Label>
               <Form.Control
+                className="input-lrg"
                 type="text"
                 value={explore}
                 onChange={(e) => setexplore(e.target.value)}

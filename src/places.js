@@ -15,13 +15,13 @@ const PlacesList = () => {
       id: 1,
       cityName: "Atlanta",
       type: "at night",
-      eat: "Rubios",
-      mustTryFood: "Steak Tacos",
-      drink: "Calvins",
+      eat: "Poor Calvins",
+      mustTryFood: "Lamb Ossoburro",
+      drink: "Poor Calvins",
       mustTryDrink: "vodka martini",
       see: "midtown",
-      especiallySee: "piedmont park",
-      mustDo: "catch a show in piedmont park",
+      especiallySee: "piedmont park ",
+      mustDo: "music in piedmont park",
       explore: "midtown",
       budget: "200",
     },
@@ -37,7 +37,6 @@ const PlacesList = () => {
     alert("You selected " + cityName);
   };
 
-  //get all existing ptoduct inside the list
   const addPlace = (place) => {
     setPlaces([...places, place]);
   };
@@ -68,7 +67,7 @@ const PlacesList = () => {
     };
     return (
       <>
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", textTransform: "lowercase" }}>
           <Row>
             <h3 style={{ fontSize: "10vh", textTransform: "capitalize" }}>
               {cityName}
@@ -76,17 +75,32 @@ const PlacesList = () => {
             <p className="type">{type}</p>
             <p className="user">by @user</p>
           </Row>
-          <img src="..." class="img-thumbnail" alt="..." />
+
+          <img
+            style={{ width: " 40vw", margin: "4vh 0 -4vh 0" }}
+            src="https://images.unsplash.com/photo-1589414480645-9c552d67f352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXRsYW50YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            class="img-thumbnail"
+            alt="..."
+          />
           <Row className="grid three sections">
             <div>
               <h3>eat</h3>
             </div>
             <Col>
-              <Row>{eat}</Row>
-              <Row> Must try: {mustTryFood}</Row>
+              <Row className="eat">{eat}</Row>
+              <Row>
+                <p className="especially">Must try:</p> {mustTryFood}
+              </Row>
             </Col>
             <div>
-              <img src="..." class="img-thumbnail" alt="..." />
+              <img
+                className="imgs"
+                src={
+                  "https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                }
+                class="img-thumbnail"
+                alt="..."
+              />
             </div>
           </Row>
 
@@ -95,7 +109,7 @@ const PlacesList = () => {
               <h3>drink</h3>
             </div>
             <Col>
-              <Row>{drink}</Row>
+              <Row className="eat">{drink}</Row>
               <Row> Must try: {mustTryDrink}</Row>
             </Col>
             <div>
@@ -121,17 +135,14 @@ const PlacesList = () => {
               <h3>do</h3>
             </div>
             <Col>
-              <Row style={{ margin: "0 -2vw" }}>{mustDo}</Row>
-              <Row style={{ textAlign: "left", margin: "0 -2vw" }}>
-                it will be all written here, but not yet!{" "}
-              </Row>
+              <Row>{mustDo}</Row>
             </Col>
-            <div></div>
+            <div>it will be all written here, but not yet!</div>
           </Row>
 
           <Row className="grid three sections">
             <div>
-              <h3>explore</h3>
+              <h3 style={{ marginLeft: "2vw" }}>explore</h3>
             </div>
             <Row>{explore}</Row>
             <div>
@@ -155,10 +166,10 @@ const PlacesList = () => {
     <>
       {" "}
       <div className="grid two">
-        <div style={{ border: "1px solid pink" }}>
+        <div id="lab">
           <WanderLab index={places.length + 1} onCreatePlace={addPlace} />
         </div>
-        <div>
+        <div id="places">
           {places.map((p) => (
             <Place
               key={p.id}

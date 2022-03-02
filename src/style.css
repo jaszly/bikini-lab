@@ -32,6 +32,20 @@ body {
   grid-template-columns: 1fr 2fr 3fr;
 }
 
+#lab {
+  border: 1px solid black;
+  width: 30vw;
+}
+
+#places {
+  border: 1px solid black;
+  padding: 3vw;
+  margin-left: -12vw;
+}
+
+#lab-header {
+}
+
 .type {
   text-transform: lowercase;
   font-size: 4vh;
@@ -46,4 +60,16 @@ body {
 
 .sections {
   margin: 10vh 0 12vh 0;
+}
+
+.imgs {
+  padding: 10vh;
+}
+
+.especially {
+  margin: 0vh -5vw 0 -5.5vw;
+}
+
+.header-three {
+  margin-bottom: 10vh;
 }

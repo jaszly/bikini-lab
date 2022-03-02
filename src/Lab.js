@@ -83,7 +83,14 @@ const WanderLab = ({ index, onCreatePlace }) => {
     <Container>
       <Row>
         <Col>
-          <h1>LAB here</h1>
+          <div id="lab-header">
+            <h1>welcome to your wander lab</h1>
+            <p>
+              use this space to build your itenerary advisor and preview on the
+              right.{" "}
+            </p>
+          </div>
+
           <Form>
             <Form.Group className="mb-1">
               <Form.Label> City Name </Form.Label>
@@ -184,11 +191,6 @@ const WanderLab = ({ index, onCreatePlace }) => {
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />{" "}
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <br />
             <Button onClick={createPlace}> Add to Wander Lab</Button>
             <hr />

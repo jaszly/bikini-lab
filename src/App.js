@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./style.css";
 import WanderLab from "./Lab.js";
 import PlacesList from "./places.js";
-import { Button, Container, Col, Form, Row } from "react-bootstrap";
+import { Button, Container, Col, Form, Row, Tabs, Tab } from "react-bootstrap";
 
 class App extends React.Component {
   // state = { setPlaces: places };
@@ -16,9 +16,12 @@ class App extends React.Component {
       <>
         <Container>
           <Row>
-            <h1 style={{ textAlign: "center", textTransform: "uppercase" }}>
-              Welcome to wander lab
-            </h1>
+            <div style={{ textAlign: "center", textTransform: "lowercase" }}>
+              <h1 id="header-txt">wander lab</h1>
+              <h2 id="header-subtxt">
+                handcrafted travel guides for the wanderlust adventurers{" "}
+              </h2>
+            </div>
           </Row>
           <Row>
             <PlacesList />

@@ -7,6 +7,20 @@ body {
   background-color: #efe2cf;
 }
 
+#header-txt {
+  font-family: "BhuTuka Expanded One";
+  font-size: 6em;
+  padding: 2vh;
+  margin: 4vh 0 6vh;
+}
+
+#header-subtxt {
+  margin-top: -6vh;
+  font-family: "Raleway";
+  font-size: 2em;
+  margin-bottom: 12vh;
+}
+
 .cartButton {
   background-color: pink;
   color: white;
@@ -14,10 +28,12 @@ body {
   border: none;
 }
 .form-control {
-  background-color: #efe2cf;
+  background-color: #efe6d8;
   border: 1px solid black;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   width: 20vw;
+  height: 20%;
+  padding: 2vh;
 }
 
 /* input control */
@@ -33,7 +49,7 @@ body {
 
 .form-label {
   text-transform: lowercase;
-  font-size: 1.4em;
+  font-size: 1em;
   margin-top: 5vh;
   border-top: 1px solid #7b8a96;
   padding: 2vh 0;
@@ -49,6 +65,11 @@ body {
   margin-top: 55px;
 }
 
+.headers,
+.form-label,
+p {
+  font-family: Raleway;
+}
 .grid {
   display: grid;
 }
@@ -81,12 +102,14 @@ body {
   text-transform: lowercase;
   font-size: 4vh;
   margin: -1vh;
+  font-family: "Raleway";
 }
 
 .user {
   text-transform: lowercase;
   font-size: 4vh;
   margin: 1vh 0 0 0;
+  font-family: "Raleway";
 }
 
 .sections {
@@ -97,10 +120,21 @@ body {
   padding: 10vh;
 }
 
+i {
+  font-size: 4vh;
+  margin: 0 2vh;
+  padding: -7vh 0 2vh;
+  vertical-align: middle;
+}
 .especially {
   margin: 0vh -5vw 0 -5.5vw;
 }
 
 .header-three {
   margin-bottom: 10vh;
+}
+
+/* city name */
+h3 {
+  font-family: Raleway;
 }

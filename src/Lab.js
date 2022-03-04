@@ -84,16 +84,20 @@ const WanderLab = ({ index, onCreatePlace }) => {
       <Row>
         <Col>
           <div id="lab-header">
-            <h1>welcome to your wander lab</h1>
-            <p>
-              use this space to build your itenerary advisor and preview on the
-              right.{" "}
+            <h1 className="headers" style={{ margin: "2vh" }}>
+              welcome to your wander lab
+            </h1>
+            <p style={{ margin: "2vh 1vw 4vh" }}>
+              use this space to build your guide and preview on the right.{" "}
             </p>
+            <hr />
           </div>
 
           <Form>
             <Form.Group className="mb-1">
-              <Form.Label> City + Time of day:</Form.Label>
+              <Form.Label style={{ border: "none", marginTop: "2vh" }}>
+                City + Time of day:
+              </Form.Label>
               <Form.Control
                 type="text"
                 value={cityName}
@@ -110,11 +114,16 @@ const WanderLab = ({ index, onCreatePlace }) => {
                 value={type}
                 onChange={(e) => settype(e.target.value)}
               >
-                <option> time of day</option>
-                <option value="1">in a day</option>
-                <option value="2">in an afternoon</option>
-                <option value="3">in an evening</option>
-                <option value="4">at night</option>
+                {" "}
+                <option selected>Select time frame</option>
+                <option value="in a morning">
+                  in a morning (12pm and earlier)
+                </option>
+                <option value="in an afternoon">
+                  in an afternoon (6 hours or less)
+                </option>
+                <option value="in an evening">in an evening (after 5pm)</option>
+                <option value="at night">at night (late night) </option>
               </Form.Select>
               <br />
               <Form.Label> Upload a photo </Form.Label>
@@ -123,7 +132,7 @@ const WanderLab = ({ index, onCreatePlace }) => {
             </Form.Group>
             <br />
             <Form.Group className="mb-1">
-              <Form.Label> Eat: </Form.Label>
+              <Form.Label> best place to eat {type}: </Form.Label>
               <Form.Control
                 type="text"
                 value={eat}
@@ -138,7 +147,7 @@ const WanderLab = ({ index, onCreatePlace }) => {
                 onChange={(e) => setmustTryFood(e.target.value)}
               />{" "}
               <br />
-              <Form.Label> Drink: </Form.Label>
+              <Form.Label> Grab a beverage {type} </Form.Label>
               <Form.Control
                 type="text"
                 value={drink}
@@ -164,7 +173,7 @@ const WanderLab = ({ index, onCreatePlace }) => {
               />
               <Form.Label> Especially: </Form.Label>
               <Form.Control
-                type="text"
+                type="textarea"
                 value={especiallySee}
                 onChange={(e) => setespeciallySee(e.target.value)}
               />
@@ -175,7 +184,7 @@ const WanderLab = ({ index, onCreatePlace }) => {
                 value={mustDo}
                 onChange={(e) => setmustDo(e.target.value)}
               />
-              <Form.Label> Explore: </Form.Label>
+              <Form.Label> Best thing to explore {type}: </Form.Label>
               <Form.Control
                 className="input-lrg"
                 type="text"
@@ -186,6 +195,7 @@ const WanderLab = ({ index, onCreatePlace }) => {
             <Form.Label> Budget </Form.Label>
             <Form.Control
               type="number"
+              placeholder="$0.00"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
             />

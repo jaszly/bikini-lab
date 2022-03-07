@@ -16,7 +16,8 @@ const PlacesList = () => {
       cityName: "Paris",
       type: "in a morning",
       eat: "Boulange",
-      mustTryFood: "pan du fromage",
+      mustTryFood:
+        "the pan du fromage, the french toast, the strawberry sorbet. yum.",
       drink: "cafe de atlier",
       mustTryDrink: "parisian latte",
       see: "le minoff",
@@ -98,21 +99,21 @@ const PlacesList = () => {
           />
           <Row className="grid three sections">
             <div>
-              <h3>eat</h3>
+              <h3 className="subtitle">eat</h3>
             </div>
             <Col>
-              <Row className="eat">{eat}</Row>
+              <Row className="input-primary">"{eat}"</Row>
               <Row>
-                <p className="especially">Must try:</p> {mustTryFood}
+                <p className="especially">Must try:</p>
+                <p className="description">"{mustTryFood}"</p>
               </Row>
             </Col>
             <div>
               <img
-                className="imgs"
+                className="img-thumbnail little-imgs"
                 src={
                   "https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 }
-                className="img-thumbnail"
                 alt="..."
               />
             </div>
@@ -120,11 +121,39 @@ const PlacesList = () => {
 
           <Row className="grid three sections">
             <div>
-              <h3>drink</h3>
+              <h3 className="subtitle">drink</h3>
+              <Row>
+                <p className="subtitle-secondary">Must try: </p>
+              </Row>
             </div>
             <Col>
-              <Row className="eat">{drink}</Row>
-              <Row> Must try: {mustTryDrink}</Row>
+              <Row style={{ marginTop: "2vh" }} className="input-primary">
+                "{drink}"
+              </Row>
+
+              <Row>
+                <p className="description">"{mustTryDrink}"</p>
+              </Row>
+            </Col>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1602833334025-5019f046b8f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                className="img-thumbnail little-imgs"
+                alt="..."
+              />
+            </div>
+          </Row>
+
+          <Row className="grid three sections">
+            <div>
+              <h3 className="subtitle">see</h3>
+            </div>
+            <Col>
+              <Row className="input-primary">{see}</Row>
+              <Row className="subtitle-secondary">
+                {" "}
+                especially: {especiallySee}
+              </Row>
             </Col>
             <div>
               <img src="..." className="img-thumbnail" alt="..." />
@@ -133,32 +162,30 @@ const PlacesList = () => {
 
           <Row className="grid three sections">
             <div>
-              <h3>see</h3>
+              <h3 className="subtitle">do</h3>
             </div>
             <Col>
-              <Row>{see}</Row>
-              <Row> especially: {especiallySee}</Row>
+              <Row
+                style={{ fontStyle: "normal", fontWeight: "400" }}
+                className="description"
+              >
+                {mustDo}
+              </Row>
             </Col>
-            <div>
-              <img src="..." className="img-thumbnail" alt="..." />
+            <div
+              style={{ fontStyle: "normal", fontWeight: "400" }}
+              className="description"
+            >
+              more info more infoselfie from the ne corner of tour effiel.
+              loreum ipsum is def loreum ipsum
             </div>
-          </Row>
-
-          <Row className="grid three sections">
-            <div>
-              <h3>do</h3>
-            </div>
-            <Col>
-              <Row>{mustDo}</Row>
-            </Col>
-            <div>it will be all written here, but not yet!</div>
           </Row>
 
           <Row className="grid three sections">
             <div>
               <h3 style={{ marginLeft: "2vw" }}>explore</h3>
             </div>
-            <Row>{explore}</Row>
+            <Row className="input-primary">{explore}</Row>
             <div>
               <img src="..." className="img-thumbnail" alt="..." />
             </div>
@@ -168,7 +195,7 @@ const PlacesList = () => {
             <div>
               <h3 style={{ marginLeft: "2vw" }}>budget:</h3>
             </div>
-            <Row>${budget}</Row>
+            <Row className="input-primary">${budget}</Row>
           </Row>
           <hr />
         </div>

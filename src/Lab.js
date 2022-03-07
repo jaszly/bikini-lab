@@ -158,13 +158,16 @@ const WanderLab = ({ index, onCreatePlace }) => {
               <Form.Control
                 type="text"
                 value={mustTryDrink}
-                placeholder="must try drink on the menu"
+                placeholder="your top reccomended beverage(s)  "
                 onChange={(e) => setmustTryDrink(e.target.value)}
               />
             </Form.Group>
             <br />
             <Form.Group className="mb-1">
-              <Form.Label> See: </Form.Label>
+              <Form.Label>
+                {" "}
+                Must see landmark/area/historic site etc:{" "}
+              </Form.Label>
               <Form.Control
                 className="input-lrg"
                 type="text"
@@ -177,7 +180,10 @@ const WanderLab = ({ index, onCreatePlace }) => {
                 value={especiallySee}
                 onChange={(e) => setespeciallySee(e.target.value)}
               />
-              <Form.Label> Do: </Form.Label>
+              <Form.Label>
+                {" "}
+                Must do activity/excursion/tour/experience:{" "}
+              </Form.Label>
               <Form.Control
                 className="input-lrg"
                 type="text"

@@ -116,10 +116,6 @@ p {
   margin: 10vh 0 12vh 0;
 }
 
-.imgs {
-  padding: 10vh;
-}
-
 i {
   font-size: 4vh;
   margin: 0 2vh;
@@ -127,14 +123,79 @@ i {
   vertical-align: middle;
 }
 .especially {
-  margin: 0vh -5vw 0 -5.5vw;
+  margin: 4vh -4vw 0 -5vw;
+  font-family: "Noto Serif Display";
+  font-weight: 600;
 }
 
 .header-three {
   margin-bottom: 10vh;
 }
 
+/* name of section */
+.subtitle {
+  font-family: "Noto Serif Display";
+  font-weight: 700;
+  font-size: 8vh;
+  margin-left: -2vw;
+  text-align: left;
+}
+
+/* restaurant input by user */
+.input-primary {
+  font-family: "Noto Serif Display";
+  font-size: 4vh;
+  text-align: left;
+  font-style: italic;
+  margin-top: 2vh;
+}
+
+/* must try */
+.subtitle-secondary {
+  font-family: "Noto Serif Display";
+  font-weight: 800;
+  padding: 0 1.5vw 0 0;
+  letter-spacing: 0.3px;
+}
+
+/* extra content input by user */
+.input-secondary {
+  font-family: raleway;
+  font-weight: 100;
+  margin-top: 1vh;
+  font-size: 3vh;
+}
+
+/* description input by user */
+.description {
+  text-align: left;
+  margin: inherit;
+  font-family: "Noto Serif Display";
+  font-weight: 100;
+  font-style: italic;
+  margin-top: 1vh;
+}
+
+/* address */
+.addy {
+  margin: inherit;
+  /* text-align: left; */
+  margin-bottom: 2vh;
+  font-family: "Noto Serif Display";
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: left;
+  margin-left: -1vw;
+  font-size: 0.7em;
+}
 /* city name */
 h3 {
   font-family: Raleway;
+}
+
+.little-imgs {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  opacity: 65%;
 }

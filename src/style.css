@@ -21,12 +21,6 @@ body {
   margin-bottom: 12vh;
 }
 
-.cartButton {
-  background-color: pink;
-  color: white;
-  padding: 5px 15px;
-  border: none;
-}
 .form-control {
   background-color: #efe6d8;
   border: 1px solid black;
@@ -100,16 +94,16 @@ p {
 
 .type {
   text-transform: lowercase;
-  font-size: 4vh;
-  margin: -1vh;
-  font-family: "Raleway";
+  font-size: 3.5vh;
+  margin: 0vh;
+  font-family: "Noto Serif Display";
 }
 
 .user {
   text-transform: lowercase;
   font-size: 4vh;
   margin: 1vh 0 0 0;
-  font-family: "Raleway";
+  font-family: "Noto Serif Display";
 }
 
 .sections {
@@ -136,7 +130,7 @@ i {
 .subtitle {
   font-family: "Noto Serif Display";
   font-weight: 700;
-  font-size: 8vh;
+  font-size: 6vh;
   margin-left: -2vw;
   text-align: left;
 }
@@ -190,12 +184,13 @@ i {
 }
 /* city name */
 h3 {
-  font-family: Raleway;
+  font-family: "Raleway";
 }
 
 .little-imgs {
   width: 300px;
   height: 200px;
   object-fit: cover;
-  opacity: 65%;
+  opacity: 75%;
+  margin-left: 1vw;
 }

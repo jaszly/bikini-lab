@@ -13,25 +13,25 @@ const PlacesList = () => {
   const [places, setPlaces] = useState([
     {
       id: 1,
-      cityName: "Paris",
-      type: "in a morning",
-      eat: "Boulange",
+      userName: "jaszly",
+      cityName: "San Francisco",
+      type: "in an afternoon",
+      eat: "Hog Island Oyster co",
       mustTryFood:
-        "the pan du fromage, the french toast, the strawberry sorbet. yum.",
-      drink: "cafe de atlier",
-      mustTryDrink: "parisian latte",
-      see: "le minoff",
-      especiallySee: "park",
-      mustDo: "selfie from the ne corner of tour effiel",
-      explore: "le marais",
-      budget: "20",
+        "any of the local oysters to start. mussels, the shrimp po boy and fries for the table.",
+      drink: "Red Bay Coffee",
+      mustTryDrink: "Candied Yam Latte",
+      activity: "Bike the Embarcadero",
+      mustDo:
+        "Rent a bike or scooter and ride the embarcadero trail from the Ferry building to the Chase Center. Stop for photos by the bridge.",
+      explore: "The Ferry Building",
+      especiallySee:
+        "check out the farmers market, roam the shops, sample food from local artisians and pick up souvenirs.",
+      budget: "$$$",
     },
   ]);
 
   //get total budget
-  const calculateTotal = (budget) => {
-    setTotal(total + parseInt(budget));
-  };
 
   //alert place
   const showPlace = (cityName) => {
@@ -43,58 +43,56 @@ const PlacesList = () => {
   };
 
   const Place = ({
+    userName,
     cityName,
     eat,
     type,
     mustTryFood,
     drink,
     mustTryDrink,
-    see,
+    activity,
     especiallySee,
     mustDo,
     explore,
     budget,
     content,
     onShowPlace,
-    onCalculateTotal,
   }) => {
     //Declare a new state var called quantity
-    const [quantity, setQuantity] = useState(0);
+    // const [quantity, setQuantity] = useState(0);
 
-    const buy = () => {
-      //alert('You selected this place')
-      setQuantity(quantity + 1);
-      onCalculateTotal(budget);
-    };
+    // const buy = () => {
+    //   //alert('You selected this place')
+    //   setQuantity(quantity + 1);
+    //   onCalculateTotal(budget);
+    // };
     return (
       <>
         <div style={{ textAlign: "center", textTransform: "lowercase" }}>
-          <Row>
+          <Row style={{ textAlign: "center" }}>
             <div>
               <h3
                 style={{
-                  fontFamily: "Raleway",
+                  fontFamily: "Noto Serif Display",
                   fontSize: "10vh",
-                  textTransform: "capitalize",
+                  textTransform: "lowercase",
                 }}
               >
                 <i className="fas fa-map-marker-alt"></i>
                 {cityName}
               </h3>
             </div>
-            <p className="type">
-              <i class="far fa-clock"></i>
-              {type}
-            </p>
+            <p className="type">{type}</p>
             <p style={{ fontSize: "15px" }} className="user">
-              by @user
+              by @{userName}
             </p>
           </Row>
+          <hr />
 
           <img
-            style={{ width: " 40vw", margin: "4vh 0 -4vh 0", opacity: "60%" }}
-            src="https://images.unsplash.com/photo-1500301111609-42f1aa6df72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            class="img-thumbnail"
+            style={{ width: " 40vw", margin: "4vh 0 -4vh 0", opacity: "80%" }}
+            src="https://images.unsplash.com/photo-1425321395722-b1dd54a97cf3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            className="img-thumbnail"
             alt="..."
           />
           <Row className="grid three sections">
@@ -104,7 +102,12 @@ const PlacesList = () => {
             <Col>
               <Row className="input-primary">"{eat}"</Row>
               <Row>
-                <p className="especially">Must try:</p>
+                <p
+                  className="subtitle-secondary"
+                  style={{ margin: "1vh -4vw}" }}
+                >
+                  Must try:
+                </p>
                 <p className="description">"{mustTryFood}"</p>
               </Row>
             </Col>
@@ -112,13 +115,13 @@ const PlacesList = () => {
               <img
                 className="img-thumbnail little-imgs"
                 src={
-                  "https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  "https://images.unsplash.com/photo-1627898292764-6733087b55ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b3lzdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
                 }
                 alt="..."
               />
             </div>
           </Row>
-
+          <hr />
           <Row className="grid three sections">
             <div>
               <h3 className="subtitle">drink</h3>
@@ -132,70 +135,55 @@ const PlacesList = () => {
               </Row>
 
               <Row>
-                <p className="description">"{mustTryDrink}"</p>
+                <p className="description" style={{ marginTop: "3vh" }}>
+                  "{mustTryDrink}"
+                </p>
               </Row>
             </Col>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1602833334025-5019f046b8f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                src="https://cdn.vox-cdn.com/thumbor/eER6G3tGnquawRm-ehn9QIdYr9E=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22436364/RedBayCoffee_PChang_3243.jpg"
                 className="img-thumbnail little-imgs"
                 alt="..."
               />
             </div>
           </Row>
-
-          <Row className="grid three sections">
-            <div>
-              <h3 className="subtitle">see</h3>
-            </div>
-            <Col>
-              <Row className="input-primary">{see}</Row>
-              <Row className="subtitle-secondary">
-                {" "}
-                especially: {especiallySee}
-              </Row>
-            </Col>
-            <div>
-              <img src="..." className="img-thumbnail" alt="..." />
-            </div>
-          </Row>
+          <hr />
 
           <Row className="grid three sections">
             <div>
               <h3 className="subtitle">do</h3>
             </div>
             <Col>
-              <Row
-                style={{ fontStyle: "normal", fontWeight: "400" }}
-                className="description"
-              >
-                {mustDo}
-              </Row>
+              <Row className="input-primary">{activity}</Row>
+              <Row className="subtitle-secondary"></Row>
             </Col>
-            <div
-              style={{ fontStyle: "normal", fontWeight: "400" }}
-              className="description"
-            >
-              more info more infoselfie from the ne corner of tour effiel.
-              loreum ipsum is def loreum ipsum
+            <Row style={{ fontWeight: "400" }} className="description">
+              "{mustDo}"
+            </Row>
+          </Row>
+          <hr />
+
+          <Row className="grid two sections">
+            <div>
+              <h3 className="subtitle">explore</h3>
+            </div>
+            <Col>
+              <Row className="input-primary">{explore}</Row>
+            </Col>
+            <div style={{ fontWeight: "400" }} className="description">
+              {especiallySee}
             </div>
           </Row>
+          <hr />
 
-          <Row className="grid three sections">
+          <Row className="grid two sections" style={{ margin: "0 11vw" }}>
             <div>
-              <h3 style={{ marginLeft: "2vw" }}>explore</h3>
+              <h3 className="subtitle">budget:</h3>
             </div>
-            <Row className="input-primary">{explore}</Row>
-            <div>
-              <img src="..." className="img-thumbnail" alt="..." />
-            </div>
-          </Row>
-
-          <Row className="grid two  ">
-            <div>
-              <h3 style={{ marginLeft: "2vw" }}>budget:</h3>
-            </div>
-            <Row className="input-primary">${budget}</Row>
+            <Row className="input-primary" style={{ fontSize: "5vh" }}>
+              {budget}
+            </Row>
           </Row>
           <hr />
         </div>
@@ -214,19 +202,19 @@ const PlacesList = () => {
           {places.map((p) => (
             <Place
               key={p.id}
+              userName={p.userName}
               cityName={p.cityName}
               type={p.type}
               eat={p.eat}
               mustTryFood={p.mustTryFood}
               drink={p.drink}
               mustTryDrink={p.mustTryDrink}
-              see={p.see}
+              activity={p.activity}
               especiallySee={p.especiallySee}
               mustDo={p.mustDo}
               explore={p.explore}
               budget={p.budget}
               content={p.content}
-              onCalculateTotal={calculateTotal}
               onShowPlace={showPlace}
             />
           ))}

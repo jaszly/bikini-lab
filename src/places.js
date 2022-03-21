@@ -132,7 +132,7 @@ const PlacesList = () => {
               <Card className="cards">
                 <Card.Img
                   variant="top"
-                  src="https://images.unsplash.com/photo-1621247473481-88661d45084e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                  src="https://images.unsplash.com/photo-1636564225140-44ceddbd5402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                 />
                 <Card.Body>
                   <p className="card-section">do</p>
@@ -151,7 +151,7 @@ const PlacesList = () => {
               <Card className="cards">
                 <Card.Img
                   variant="top"
-                  src="https://images.unsplash.com/photo-1621247473481-88661d45084e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                  src="https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmVycnklMjBidWlsZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
                 />
                 <Card.Body>
                   <p className="card-section">explore</p>

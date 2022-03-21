@@ -7,16 +7,14 @@ For the wanderlust traveler who wants personalized, non touristy advice from loc
 ### View Blog
 ![Img](https://github.com/jaszly/wander-lab/blob/master/images/SanFrancisco-example.png)  
 
-### Create a Blog
+<!-- ### Create a Blog
+ -->
  
-
- 
-
 ## Tech Stack
 
 ### Frontend
 - React.js 
 - Bootstrap
-- 
-- Clone the repository
-- Install dependencies: npm install
+
+
+ 
